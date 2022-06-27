@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --padding-container: 100px 0;
+    --color-title: #003849;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav{
+    background: #e6378e;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 50px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    /* text-transform: uppercase; */
+}
+li a.active, li a:hover{
+    background: #7abed3;
+    transition: .5s;
+    border-radius: 15px;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+    background: url(fondo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 100;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+/* texto1 */
+.about {
+    text-align: center;
+    
+    }
+
+.subtitle {
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 5px solid rgb(227, 47, 233);
+    border-radius: 40px 20px;
+    color: var(--color-title);
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    }
+
+.about__paragraph {
+    line-height: 1.7;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 18px;
+    }
+
+
+/* titulo del carrusel */
+   body{
+    background: #c7c7c7;
+    }
+
+
+
+/* carrusel */
+.container__slider{
+    max-width: 1500px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    /* margin-top: -250px; */
+    
+}
+
+input[type=radio]{
+    display: none;
+    }
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    max-height: 600px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* z-index:-1; */
+    /* margin-top: -180px; */
+}
+
+.cards{
+    position: relative;
+    width: 150%;
+    height: 100%;
+}
+
+.card{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+img{
+    width: 110%;
+    height: 110%;
+    border-radius: 15px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+
+#item-2:checked ~ .cards #selector-1,
+#item-1:checked ~ .cards #selector-3,
+#item-3:checked ~ .cards #selector-2{
+    transform: translateX(-50%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#item-3:checked ~ .cards #selector-1,
+#item-1:checked ~ .cards #selector-2,
+#item-2:checked ~ .cards #selector-3{
+    transform: translateX(50%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #selector-1,
+#item-2:checked ~ .cards #selector-2,
+#item-3:checked ~ .cards #selector-3{
+    transform: translateX(0) scale(1);
+    z-index: 1;
+}
+
+
+/* About */
+.hero__container2 {
+    font-size: 18px;
+    margin-bottom: 120px;
+      
+}
+
+.hero__subtitle2 {
+    color: blue;
+    margin: 10px 10px 10px 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: solid;
+        border-width: 6px;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #ce06bd, #15a0f1);
+    }
+
+
+.hero__paragraph2 {
+    line-height: 1.7;
+    text-align: center;
+    font-size: 20px;
+    }
+
+
+    /* * price */ 
+    .price{
+        text-align: center;
+        
+    }
+    
+    .price__table{
+        padding-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5em;
+        justify-content: space-evenly;
+        align-items: center;
+           }
+    
+    .price__element{
+        background-color: #76b9f0;
+        text-align: center;
+        border-radius: 10px;
+        width: 330px;
+        padding: 40px;
+        --color-plan: #404041;
+        --color-price: #1D293F;
+        --bg-cta: #fff;
+        --color-cta: #5454D4;
+        --color-items: #3a3939;
+    }
+    
+    .price__element--best{
+        width: 370px;
+        padding: 60px 40px;
+        background-color: #FF7143;
+        --color-plan: rgb(255 255 255 / 75%);
+        --color-price: #fff;
+        --bg-cta: #9F3919;
+        --color-cta: #FFF;
+        --color-items: #fff;
+    }
+    
+    
+    .price__name{
+        color: var(--color-plan);
+        margin-bottom: 15px;
+        font-weight: 300;
+    }
+    
+    .price__price{
+        font-size: 2.5rem;
+        color: var(--color-price);
+    }
+    
+    .price__items{
+        margin-top: 35px;
+        display: grid;
+        gap: 1em;
+        font-weight: 300;
+        font-size: 1.2rem;
+        margin-bottom: 50px;
+        color: var(--color-items);
+    }
+    
+    .price__cta{
+        display: block;
+        padding: 20px 0;
+        border-radius: 10px;
+        text-decoration: none;
+        background-color: var(--bg-cta);
+        font-weight: 600;
+        color: var(--color-cta);
+        box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+    }
+
+    /* descargar la guia */
+
+body{
+    /* margin: 0;
+    padding: 0; */
+    /* display: flex; */
+    /* content: center;
+    align-items: center;
+    text-align: center; */
+    /* height: 200vh; */
+    /* background: #020202; */ 
+    }
+
+.btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: rgb(90, 57, 236);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    text-align: center;
+    align-content: center;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.btn-neon:hover{
+    background: #e4f54b;
+    box-shadow: 0 0 30px #c27f40, 0 0 50px #a401d6, 0 0 90px #a945c7;
+    transition-delay: 1s;
+ }
+.btn-neon span{
+    position: absolute;
+    display: block;
+}
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#710ac5);
+ }
+ .btn-neon:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+ #span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#9b28be);
+}
+ .btn-neon:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#a945c7);
+}
+.btn-neon:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#a945c7);
+}
+.btn-neon:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+/* boton de whatsap */
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+    
+  z-index:10;
+}
+.float:hover {
+	text-decoration: none;
+	color: #25d366;
+  background-color:#fff;
+}
+
+.my-float{
+	margin-top:16px;
+}
